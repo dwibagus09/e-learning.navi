@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">E-Learning</string>
+    <string name="Username">Username</string>
+    <string name="Password">Password</string>
+    <string name="background_tint">Selamat Datang</string>
+    <string name="login">Login</string>
+    <string name="selamat_datang">Selamat Datang</string>
+</resources>
