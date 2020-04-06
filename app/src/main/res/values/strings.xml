@@ -5,4 +5,71 @@
     <string name="background_tint">Selamat Datang</string>
     <string name="login">Login</string>
     <string name="selamat_datang">Selamat Datang</string>
+    <string name="gambar_tv_show">gambar tv</string>
+    <string name="gambar_film">gambar film</string>
+    <string name="name_tugas">Nama Tugas</string>
+    <string name="name_materi">Name Materi</string>
+    <string name="dodo">DadaDodo works rather differently than Dissociated Press</string>
+    <string name="movie">Materi</string>
+    <string name="tvshow">Tugas</string>
+    <string name="title_activity_detail">Detail Activity</string>
+    <string name="change_language_settings">Change Language Setting</string>
+    <string name="rating">Rating :</string>
+    <string name="year">Release :</string>
+    <string name="desc">Overview :</string>
+    <string name="director">Director : </string>
+
+<!--    Data Tugas     -->
+    <string-array name="tugas_photo">
+        <item>@drawable/bg_skuy_1</item>
+        <item>@drawable/bg_skuy_1</item>
+        <item>@drawable/bg_skuy_1</item>
+        <item>@drawable/bg_skuy_1</item>
+        <item>@drawable/bg_skuy_1</item>
+        <item>@drawable/bg_skuy_1</item>
+    </string-array>
+    <string-array name="tugas_name">
+        <item>Nama Tugas</item>
+        <item>Nama Tugas</item>
+        <item>Nama Tugas</item>
+        <item>Nama Tugas</item>
+        <item>Nama Tugas</item>
+        <item>Nama Tugas</item>
+    </string-array>
+    <string-array name="tugas_desc">
+        <item>Deskripsi Tugas</item>
+        <item>Deskripsi Tugas</item>
+        <item>Deskripsi Tugas</item>
+        <item>Deskripsi Tugas</item>
+        <item>Deskripsi Tugas</item>
+        <item>Deskripsi Tugas</item>
+    </string-array>
+
+    <!--    Data Materi     -->
+    <string-array name="materi_photo">
+        <item>@drawable/bg_skuy</item>
+        <item>@drawable/bg_skuy</item>
+        <item>@drawable/bg_skuy</item>
+        <item>@drawable/bg_skuy</item>
+        <item>@drawable/bg_skuy</item>
+        <item>@drawable/bg_skuy</item>
+    </string-array>
+    <string-array name="materi_name">
+        <item>Nama Materi</item>
+        <item>Nama Materi</item>
+        <item>Nama Materi</item>
+        <item>Nama Materi</item>
+        <item>Nama Materi</item>
+        <item>Nama Materi</item>
+    </string-array>
+    <string-array name="materi_desc">
+        <item>Deskripsi Materi</item>
+        <item>Deskripsi Materi</item>
+        <item>Deskripsi Materi</item>
+        <item>Deskripsi Materi</item>
+        <item>Deskripsi Materi</item>
+        <item>Deskripsi Materi</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

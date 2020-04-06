@@ -6,39 +6,65 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.viewpager.widget.ViewPager;
+
+import com.google.android.material.tabs.TabLayout;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-    EditText username, password;
-    Button btn_login;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ViewPager viewPager = findViewById(R.id.view_pager);
+        setupViewPager(viewPager);
+        TabLayout tabLayout = findViewById(R.id.tabs);
+        tabLayout.setupWithViewPager(viewPager);
+        getSupportActionBar().setElevation(0);
+    }
+    public void setupViewPager(ViewPager viewPager){
+        SectionPagerAdapter sectionPagerAdapter = new SectionPagerAdapter(getSupportFragmentManager());
+        sectionPagerAdapter.addFragment(new TugasFragment(), "TUGAS");
+        sectionPagerAdapter.addFragment(new MateriFragment(), "MATERI!");
 
-        username =  findViewById(R.id.username);
-        password = findViewById(R.id.password);
-        btn_login =  findViewById(R.id.btn_login);
+        viewPager.setAdapter(sectionPagerAdapter);
+    }
+    static class SectionPagerAdapter extends FragmentPagerAdapter {
+        private final List<Fragment> fragmentlist = new ArrayList<>();
+        private final List<String> stringTitleList = new ArrayList<>();
 
-        btn_login.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String usernameKey = username.getText().toString();
-                String passwordKey = password.getText().toString();
-            // ini di taruh sini aja kalo mau disambungkan ke punyamu
-                if (usernameKey.equals("admin") && passwordKey.equals("admin")) {
-                    //Jika Berhasil
-                    Intent welcome = new Intent(MainActivity.this, Dashboard_activity.class);
-                    startActivity(welcome);
-                }
-                else {
-                    AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-                    builder.setMessage("Username atau Password Anda Salah !")
-                            .setNegativeButton("Retry", null).create().show();
-                }
-            }
-        });
+        public SectionPagerAdapter(@NonNull FragmentManager fm) {
+            super(fm);
+        }
+
+        @NonNull
+        @Override
+        public Fragment getItem(int position) {
+            return fragmentlist.get(position);
+        }
+
+        @Override
+        public int getCount() {
+            return fragmentlist.size();
+        }
+        public void addFragment(Fragment fragment, String title){
+            fragmentlist.add(fragment);
+            stringTitleList.add(title);
+        }
+
+        @Override
+        public CharSequence getPageTitle(int position){
+            return stringTitleList.get(position);
+        }
     }
 }
