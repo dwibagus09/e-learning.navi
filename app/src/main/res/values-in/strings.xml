@@ -1,22 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">E-Learning</string>
     <string name="gambar_tv_show">gambar tv</string>
     <string name="gambar_film">gambar film</string>
-    <string name="name_tv_show">Name TV</string>
-    <string name="name_film">Name Film</string>
+    <string name="name_tv_show">Nama TV</string>
+    <string name="name_film">Nama Film</string>
     <string name="dodo">DadaDodo works rather differently than Dissociated Press</string>
-    <string name="movie">Movies</string>
-    <string name="tvshow">TV Shows</string>
+    <string name="movie">Film</string>
+    <string name="tvshow">Sinetron TV</string>
     <string name="title_activity_detail">Detail Activity</string>
-    <string name="change_language_settings">Change Language Setting</string>
-    <string name="rating">Rating :</string>
-    <string name="year">Release :</string>
-    <string name="desc">Overview :</string>
-    <string name="director">Director : </string>
-    <string name="create_account"><font color="#00ff00">Create Account!</font></string>
-    <string name="email">Account</string>
-    <string name="password">Password</string>
-    <string name="login">Login</string>
+    <string name="change_language_settings">Pengaturan Ganti Bahasa</string>
+    <string name="rating">Peringkat :</string>
+    <string name="year">Tahun :</string>
+    <string name="desc">Deskripsi :</string>
+    <string name="director">Direksi :</string>
 
     <!--    Data item  Tv Show  -->
     <string-array name="tv_show_photo">
@@ -99,10 +96,7 @@
         <item>Deskripsi Materi</item>
     </string-array>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="home">Login</string>
-    <string name="name_materi">Nama Materi</string>
-    <string name="name_tugas">Nama Tugas</string>
-    <string name="download">Download</string>
+
+
+
 </resources>
