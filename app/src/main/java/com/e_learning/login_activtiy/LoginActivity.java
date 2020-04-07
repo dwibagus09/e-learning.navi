@@ -1,13 +1,13 @@
 package com.e_learning.login_activtiy;
 
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
 
 public class LoginActivity extends AppCompatActivity {
     EditText username, password;
@@ -27,7 +27,7 @@ public class LoginActivity extends AppCompatActivity {
                 String usernameKey = username.getText().toString();
                 String passwordKey = password.getText().toString();
                 // ini di taruh sini aja kalo mau disambungkan ke punyamu
-                if (usernameKey.equals("siswa") && passwordKey.equals("siswa")) {
+                if (usernameKey.equals("admin") && passwordKey.equals("admin")) {
                     //Jika Berhasil
                     Intent welcome = new Intent(LoginActivity.this, MainActivity.class);
                     startActivity(welcome);
