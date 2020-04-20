@@ -1,5 +1,6 @@
 package com.elearning.navi;
 
+import android.content.res.TypedArray;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -20,9 +21,12 @@ import java.util.ArrayList;
 public class TugasFragment extends Fragment {
     private RecyclerView rvTugas;
     private ArrayList<Tugas> listTugas;
-    private String dataNameT[],dataDescT[];
+    private TypedArray dataImgT;
+    private String dataNameT[];
+    private String dataDescT[];
 
     private void prepare(){
+        dataImgT = getResources().obtainTypedArray(R.array.tugas_img);
         dataNameT = getResources().getStringArray(R.array.tugas_name);
         dataDescT = getResources().getStringArray(R.array.tugas_desc);
     }
@@ -31,6 +35,7 @@ public class TugasFragment extends Fragment {
         listTugas = new ArrayList<>();
         for (int i=0;i<dataNameT.length;i++){
             Tugas tugas = new Tugas();
+            tugas.setImgT(dataImgT.getResourceId(i,-1));
             tugas.setNamaT(dataNameT[i]);
             tugas.setDescT(dataDescT[i]);
 

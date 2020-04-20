@@ -1,5 +1,6 @@
 package com.elearning.navi;
 
+import android.content.res.TypedArray;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -20,10 +21,12 @@ import java.util.ArrayList;
 public class MateriFragment extends Fragment {
     private RecyclerView rvMateri;
     private ArrayList<Materi> listMateri;
+    private TypedArray dataImgM;
     private String dataNameM[];
     private String dataDescM[];
 
     private void prepare(){
+        dataImgM = getResources().obtainTypedArray(R.array.materi_img);
         dataNameM = getResources().getStringArray(R.array.materi_name);
         dataDescM = getResources().getStringArray(R.array.materi_desc);
     }
@@ -32,6 +35,7 @@ public class MateriFragment extends Fragment {
         listMateri = new ArrayList<>();
         for (int i = 0; i<dataNameM.length; i++){
             Materi materi = new Materi();
+            materi.setImgM(dataImgM.getResourceId(i,-1));
             materi.setNameM(dataNameM[i]);
             materi.setDescM(dataDescM[i]);
 

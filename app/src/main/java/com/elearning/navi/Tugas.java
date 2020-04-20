@@ -5,9 +5,18 @@ import android.os.Parcelable;
 
 public class Tugas implements Parcelable {
     String namaT,descT;
+    private int imgT;
 
     Tugas(){
 
+    }
+
+    public void setImgT(int imgT) {
+        this.imgT = imgT;
+    }
+
+    public int getImgT() {
+        return imgT;
     }
 
     public void setNamaT(String namaT) {
@@ -27,6 +36,7 @@ public class Tugas implements Parcelable {
     }
 
     protected Tugas(Parcel in) {
+        imgT = in.readInt();
         namaT = in.readString();
         descT = in.readString();
     }
@@ -50,6 +60,7 @@ public class Tugas implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
+        dest.writeInt(imgT);
         dest.writeString(namaT);
         dest.writeString(descT);
     }

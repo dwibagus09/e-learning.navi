@@ -16,7 +16,6 @@
         android:layout_width="match_parent"
         android:layout_height="125dp"
         android:adjustViewBounds="true"
-        android:background="@drawable/bg_skuy"
         android:scaleType="fitXY" />
 
     <TextView

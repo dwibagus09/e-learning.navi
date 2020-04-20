@@ -11,6 +11,9 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
+
 import org.w3c.dom.Text;
 
 import java.util.ArrayList;
@@ -38,6 +41,10 @@ public class TugasAdapter extends RecyclerView.Adapter<TugasAdapter.TugasViewHol
     @Override
     public void onBindViewHolder(@NonNull TugasViewHolder holder, int position) {
         final Tugas tugas = listTugas.get(position);
+        Glide.with(holder.itemView.getContext())
+                .load(tugas.getImgT())
+                .apply(new RequestOptions().override(350,550))
+                .into(holder.imgViewT);
         holder.tvNameT.setText(tugas.getNamaT());
         holder.tvDescT.setText(tugas.getDescT());
         //button

@@ -5,10 +5,18 @@ import android.os.Parcelable;
 
 public class Materi implements Parcelable {
     private String nameM,descM;
-
+    private int imgM;
 
     Materi(){
 
+    }
+
+    public void setImgM(int imgM) {
+        this.imgM = imgM;
+    }
+
+    public int getImgM() {
+        return imgM;
     }
 
     public void setNameM(String nameM) {
@@ -27,11 +35,13 @@ public class Materi implements Parcelable {
         return descM;
     }
 
+
     public static Creator<Materi> getCreator(){
         return CREATOR;
     }
 
     protected Materi(Parcel in) {
+        imgM = in.readInt();
         nameM = in.readString();
         descM = in.readString();
     }
@@ -55,6 +65,7 @@ public class Materi implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
+        dest.writeInt(imgM);
         dest.writeString(nameM);
         dest.writeString(descM);
     }

@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 
 import java.util.ArrayList;
 
@@ -38,6 +39,10 @@ public class MateriAdapter extends RecyclerView.Adapter<MateriAdapter.MateriView
     @Override
     public void onBindViewHolder(@NonNull MateriViewHolder holder, int position) {
         final Materi materi = listMateri.get(position);
+        Glide.with(holder.itemView.getContext())
+                .load(materi.getImgM())
+                .apply(new RequestOptions().override(350,550))
+                .into(holder.imgViewM);
         holder.tvNameM.setText(materi.getNameM());
         holder.tvDescM.setText(materi.getDescM());
         //button function
