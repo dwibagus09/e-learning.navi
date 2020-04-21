@@ -119,8 +119,8 @@ public class MateriFragment extends Fragment {
                             try {
                                 JSONObject data = response.getJSONObject(i);
                                 Materi materi = new Materi();
-                                materi.setNameM(data.getString("Materi"));
-                                materi.setDescM(data.getString("Deskripsi"));
+                                materi.setNameM(data.getString("namaM"));
+                                materi.setDescM(data.getString("descM"));
                                 listMateri.add(materi);
                             }
                             catch (JSONException e){

@@ -20,9 +20,9 @@ public class TugasAdapter extends RecyclerView.Adapter<TugasAdapter.TugasViewHol
     private Context context;
     private ArrayList<Tugas> listTugas;
 
-    public TugasAdapter(Context context){
+    public TugasAdapter(Context context,ArrayList<Tugas>listTugas){
         this.context = context;
-        listTugas = new ArrayList<>();
+        this.listTugas = listTugas;
     }
 
     void setTugas(ArrayList<Tugas> tugases){
