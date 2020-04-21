@@ -29,7 +29,7 @@ public class MainSiswa extends AppCompatActivity {
     }
 
     public void setupViewPager(ViewPager viewPager){
-        SectionPagerAdapter sectionPagerAdapter = new SectionPagerAdapter(getSupportFragmentManager());
+        SectionPagerAdapter sectionPagerAdapter = new SectionPagerAdapter(getSupportFragmentManager(),2);
         sectionPagerAdapter.addFragment(new MateriFragment(),  "Materi Siswa !");
         sectionPagerAdapter.addFragment(new TugasFragment(), "Tugas Siswa !");
 
@@ -40,8 +40,8 @@ public class MainSiswa extends AppCompatActivity {
         private final List<Fragment> fragmentslist = new ArrayList<>();
         private final List<String> stringJudul = new ArrayList<>();
 
-        public SectionPagerAdapter(@NonNull FragmentManager fm) {
-            super(fm);
+        public SectionPagerAdapter(@NonNull FragmentManager fm, int behavior) {
+            super(fm, behavior);
         }
 
         @NonNull

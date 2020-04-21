@@ -16,7 +16,27 @@
     <string name="download">Download</string>
     
     <!--    Data Materi     -->
+    <string-array name="materi_img">
+        <item>@drawable/bg_skuy_1</item>
+        <item>@drawable/bg_skuy_1</item>
+        <item>@drawable/bg_skuy_1</item>
+        <item>@drawable/bg_skuy_1</item>
+        <item>@drawable/bg_skuy_1</item>
+        <item>@drawable/bg_skuy_1</item>
+        <item>@drawable/bg_skuy_1</item>
+        <item>@drawable/bg_skuy_1</item>
+        <item>@drawable/bg_skuy_1</item>
+        <item>@drawable/bg_skuy_1</item>
+        <item>@drawable/bg_skuy_1</item>
+        <item>@drawable/bg_skuy_1</item>
+    </string-array>
     <string-array name="materi_name">
+        <item>Materi</item>
+        <item>Materi</item>
+        <item>Materi</item>
+        <item>Materi</item>
+        <item>Materi</item>
+        <item>Materi</item>
         <item>Materi</item>
         <item>Materi</item>
         <item>Materi</item>
@@ -31,10 +51,36 @@
         <item>DadaDodo works rather differently than Dissociated Press</item>
         <item>DadaDodo works rather differently than Dissociated Press</item>
         <item>DadaDodo works rather differently than Dissociated Press</item>
+        <item>DadaDodo works rather differently than Dissociated Press</item>
+        <item>DadaDodo works rather differently than Dissociated Press</item>
+        <item>DadaDodo works rather differently than Dissociated Press</item>
+        <item>DadaDodo works rather differently than Dissociated Press</item>
+        <item>DadaDodo works rather differently than Dissociated Press</item>
+        <item>DadaDodo works rather differently than Dissociated Press</item>
     </string-array>
 
     <!--    Data Tugas      -->
+    <string-array name="tugas_img">
+        <item>@drawable/bg_skuy</item>
+        <item>@drawable/bg_skuy</item>
+        <item>@drawable/bg_skuy</item>
+        <item>@drawable/bg_skuy</item>
+        <item>@drawable/bg_skuy</item>
+        <item>@drawable/bg_skuy</item>
+        <item>@drawable/bg_skuy</item>
+        <item>@drawable/bg_skuy</item>
+        <item>@drawable/bg_skuy</item>
+        <item>@drawable/bg_skuy</item>
+        <item>@drawable/bg_skuy</item>
+        <item>@drawable/bg_skuy</item>
+    </string-array>
     <string-array name="tugas_name">
+        <item>Tugas</item>
+        <item>Tugas</item>
+        <item>Tugas</item>
+        <item>Tugas</item>
+        <item>Tugas</item>
+        <item>Tugas</item>
         <item>Tugas</item>
         <item>Tugas</item>
         <item>Tugas</item>
@@ -43,6 +89,12 @@
         <item>Tugas</item>
     </string-array>
     <string-array name="tugas_desc">
+        <item>DadaDodo works rather differently than Dissociated Press</item>
+        <item>DadaDodo works rather differently than Dissociated Press</item>
+        <item>DadaDodo works rather differently than Dissociated Press</item>
+        <item>DadaDodo works rather differently than Dissociated Press</item>
+        <item>DadaDodo works rather differently than Dissociated Press</item>
+        <item>DadaDodo works rather differently than Dissociated Press</item>
         <item>DadaDodo works rather differently than Dissociated Press</item>
         <item>DadaDodo works rather differently than Dissociated Press</item>
         <item>DadaDodo works rather differently than Dissociated Press</item>

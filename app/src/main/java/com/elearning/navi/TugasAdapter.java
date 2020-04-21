@@ -14,8 +14,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 
-import org.w3c.dom.Text;
-
 import java.util.ArrayList;
 
 public class TugasAdapter extends RecyclerView.Adapter<TugasAdapter.TugasViewHolder> {

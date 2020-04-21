@@ -1,7 +1,6 @@
 package com.elearning.navi;
 
 import android.content.Context;
-import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,7 +10,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-import androidx.viewpager.widget.ViewPager;
+
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
@@ -22,9 +21,9 @@ public class MateriAdapter extends RecyclerView.Adapter<MateriAdapter.MateriView
     private Context context;
     private ArrayList<Materi> listMateri;
 
-    public MateriAdapter(Context context){
+    public MateriAdapter(Context context,ArrayList<Materi> listMateri){
         this.context = context;
-        listMateri = new ArrayList<>();
+        this.listMateri = listMateri;
     }
     void setMateri(ArrayList<Materi> materis){
         this.listMateri = materis;
