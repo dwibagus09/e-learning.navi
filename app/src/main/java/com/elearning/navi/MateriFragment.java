@@ -1,5 +1,6 @@
 package com.elearning.navi;
 
+import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.res.TypedArray;
 import android.os.Bundle;
@@ -11,6 +12,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.ProgressBar;
 
 
 import com.android.volley.Request;
@@ -20,6 +23,8 @@ import com.android.volley.toolbox.JsonArrayRequest;
 import com.elearning.navi.utilities.ServerAPI;
 import com.elearning.navi.utilities.AppController;
 import com.elearning.navi.Materi;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.Snackbar;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -43,7 +48,11 @@ public class MateriFragment extends Fragment {
     private TypedArray dataImgM;
     private String dataNameM[];
     private String dataDescM[];
-    private ProgressDialog pd;
+    ProgressDialog pd;
+//    private ProgressBar pb;
+//    ImageView myImage;
+//    private static final int progress_bar_type=0;
+//    private static String URL = "https://wirasetiawan29.files.wordpress.com/2016/01/tentang-material-design1.png";
 
 //    private void prepare(){
 //        dataImgM = getResources().obtainTypedArray(R.array.materi_img);
@@ -69,13 +78,20 @@ public class MateriFragment extends Fragment {
 
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_materi,container,false);
         rvMateri = view.findViewById(R.id.rv_materi);
         rvMateri.setHasFixedSize(true);
-        btnDownload = view.findViewById(R.id.btn_M);
+//        myImage = view.findViewById(R.id.image_M);
+//
+//        FloatingActionButton fab = view.findViewById(R.id.btn_M);
+//        fab.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Snackbar.make(view,"Replace your own action", Snackbar.LENGTH_LONG).setAction("Action",null).show();
+//            }
+//        });
         pd = new ProgressDialog(MateriFragment.this.getContext());
         listMateri = new ArrayList<>();
 //        prepare();
