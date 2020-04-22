@@ -4,32 +4,27 @@ import android.app.ProgressDialog;
 import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.util.Log;
-import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
-import com.elearning.navi.utilities.ServerAPI;
 import com.elearning.navi.utilities.AppController;
-import com.elearning.navi.Materi;
+import com.elearning.navi.utilities.ServerAPI;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
-import java.util.List;
-
-import static com.android.volley.VolleyLog.TAG;
-import static com.android.volley.VolleyLog.v;
 
 /**
  * A simple {@link Fragment} subclass.
