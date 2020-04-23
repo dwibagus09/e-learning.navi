@@ -21,9 +21,9 @@ public class MateriAdapter  extends RecyclerView.Adapter<MateriAdapter.MateriVie
     private Context context;
     private ArrayList<Materi> listMateri;
 
-    public MateriAdapter(Context context){
+    public MateriAdapter(Context context,ArrayList<Materi>listMateri){
         this.context = context;
-        listMateri = new ArrayList<>();
+        this.listMateri = listMateri;
     }
     void setMateri(ArrayList<Materi> materis){
         this.listMateri = materis;
