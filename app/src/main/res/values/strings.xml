@@ -3,4 +3,67 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home">Selamat Datang</string>
+    <string name="email">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="create_account">create account?</string>
+    <string name="name_materi">Materi</string>
+    <string name="dodo">Lorem Ipsum is simply dummy text of the printing and typesetting industry</string>
+    <string name="download">Download</string>
+    <string name="name_tugas">Tugas</string>
+
+    <!--    data tugas      -->
+    <string-array name="tugas">
+        <item>Nama Tugas</item>
+        <item>Nama Tugas</item>
+        <item>Nama Tugas</item>
+        <item>Nama Tugas</item>
+        <item>Nama Tugas</item>
+        <item>Nama Tugas</item>
+        <item>Nama Tugas</item>
+        <item>Nama Tugas</item>
+        <item>Nama Tugas</item>
+        <item>Nama Tugas</item>
+    </string-array>
+
+    <string-array name="desc_t">
+        <item>Deskripsi Tugas</item>
+        <item>Deskripsi Tugas</item>
+        <item>Deskripsi Tugas</item>
+        <item>Deskripsi Tugas</item>
+        <item>Deskripsi Tugas</item>
+        <item>Deskripsi Tugas</item>
+        <item>Deskripsi Tugas</item>
+        <item>Deskripsi Tugas</item>
+        <item>Deskripsi Tugas</item>
+        <item>Deskripsi Tugas</item>
+    </string-array>
+
+    <!--    data materi     -->
+    <string-array name="materi">
+        <item>Nama Materi</item>
+        <item>Nama Materi</item>
+        <item>Nama Materi</item>
+        <item>Nama Materi</item>
+        <item>Nama Materi</item>
+        <item>Nama Materi</item>
+        <item>Nama Materi</item>
+        <item>Nama Materi</item>
+        <item>Nama Materi</item>
+        <item>Nama Materi</item>
+    </string-array>
+
+    <string-array name="desc_m">
+        <item>Deskripsi Materi</item>
+        <item>Deskripsi Materi</item>
+        <item>Deskripsi Materi</item>
+        <item>Deskripsi Materi</item>
+        <item>Deskripsi Materi</item>
+        <item>Deskripsi Materi</item>
+        <item>Deskripsi Materi</item>
+        <item>Deskripsi Materi</item>
+        <item>Deskripsi Materi</item>
+        <item>Deskripsi Materi</item>
+    </string-array>
 </resources>
