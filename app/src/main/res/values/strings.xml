@@ -1,0 +1,107 @@
+<resources>
+    <string name="app_name">e-learning.navi</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home">Selamat Datang</string>
+    <string name="email">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="create_account">create account?</string>
+    <string name="name_materi">Materi</string>
+    <string name="dodo">Lorem Ipsum is simply dummy text of the printing and typesetting industry</string>
+    <string name="download">Download</string>
+    <string name="name_tugas">Tugas</string>
+
+    <!--    data tugas      -->
+    <string-array name="tugas">
+        <item>Semester : 1</item>
+        <item>Semester : 2</item>
+        <item>Semester : 3</item>
+        <item>Semester : 4</item>
+        <item>Semester : 5</item>
+        <item>Semester : 6</item>
+        <item>Semester : 7</item>
+        <item>Semester : 8</item>
+        <item>Semester : 9</item>
+        <item>Semester : 10</item>
+    </string-array>
+
+    <string-array name="desc_t">
+        <item>Kelas : 2</item>
+        <item>Kelas : 5</item>
+        <item>Kelas : 6</item>
+        <item>Kelas : 1</item>
+        <item>Kelas : 4</item>
+        <item>Kelas : 3</item>
+        <item>Kelas : 7</item>
+        <item>Kelas : 10</item>
+        <item>Kelas : 9</item>
+        <item>Kelas : 8</item>
+    </string-array>
+
+    <!--    data materi     -->
+    <string-array name="materi">
+        <item>Nama Materi</item>
+        <item>Nama Materi</item>
+        <item>Nama Materi</item>
+        <item>Nama Materi</item>
+        <item>Nama Materi</item>
+        <item>Nama Materi</item>
+        <item>Nama Materi</item>
+        <item>Nama Materi</item>
+        <item>Nama Materi</item>
+        <item>Nama Materi</item>
+    </string-array>
+
+    <string-array name="desc_m">
+        <item>Deskripsi Materi</item>
+        <item>Deskripsi Materi</item>
+        <item>Deskripsi Materi</item>
+        <item>Deskripsi Materi</item>
+        <item>Deskripsi Materi</item>
+        <item>Deskripsi Materi</item>
+        <item>Deskripsi Materi</item>
+        <item>Deskripsi Materi</item>
+        <item>Deskripsi Materi</item>
+        <item>Deskripsi Materi</item>
+    </string-array>
+
+<!--    <string name="app_name">Quiz SQLite</string>-->
+    <string name="category">Soal-Soal</string>
+    <string name="grid_image">Grid Image</string>
+    <string name="share_with">Share with</string>
+
+    <string name="matematika_category">Matematika</string>
+    <string name="ipa_category">IPA</string>
+    <string name="ips_category">IPS</string>
+    <string name="olahraga_category">Olahraga</string>
+    <string name="agama_category">Agama Islam</string>
+    <string name="program_category">Pemrograman</string>
+
+    <string-array name="category_title">
+        <item>@string/matematika_category</item>
+        <item>@string/ipa_category</item>
+        <item>@string/ips_category</item>
+        <item>@string/olahraga_category</item>
+        <item>@string/agama_category</item>
+        <item>@string/program_category</item>
+    </string-array>
+
+    <string name="matematika">matematika</string>
+    <string name="ipa">ipa</string>
+    <string name="ips">ips</string>
+    <string name="olahraga">olahraga</string>
+    <string name="agama">agama</string>
+    <string name="program">pemrograman</string>
+    <string name="Kerjakan">Kerjakan</string>
+
+    <string-array name="category_ID">
+        <item>@string/matematika</item>
+        <item>@string/ipa</item>
+        <item>@string/ips</item>
+        <item>@string/olahraga</item>
+        <item>@string/agama</item>
+        <item>@string/program</item>
+    </string-array>
+</resources>
