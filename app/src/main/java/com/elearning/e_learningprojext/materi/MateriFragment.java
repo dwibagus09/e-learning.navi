@@ -1,23 +1,28 @@
 package com.elearning.e_learningprojext.materi;
 
 
+import android.app.ProgressDialog;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 
 import com.elearning.e_learningprojext.R;
 
 import com.elearning.e_learningprojext.Result;
+import com.elearning.e_learningprojext.service.ApiClient;
 import com.elearning.e_learningprojext.service.GetService;
 
 
+import java.util.ArrayList;
 import java.util.List;
 
 import retrofit2.Call;
@@ -32,9 +37,9 @@ import retrofit2.converter.gson.GsonConverterFactory;
  * A simple {@link Fragment} subclass.
  */
 public class MateriFragment extends Fragment {
-    private RecyclerView mRecyclerView;
-    public static final String BASE_URL = "http://192.168.43.60/E-learning/index.php/Page_guru/api/";
-    private RecyclerView.LayoutManager mLayoutManager;
+
+    ProgressDialog pd;
+
 //    ProgressBar progressBar;
 //    private ArrayList<Materi> listMateri;
 //    private TypedArray dataImgM;
@@ -65,36 +70,37 @@ public class MateriFragment extends Fragment {
 
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(final LayoutInflater inflater, final ViewGroup container,
+                             final Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_materi, container, false);
-        mRecyclerView = view.findViewById(R.id.rv_materi);
-        mLayoutManager = new LinearLayoutManager(getContext());
-        mRecyclerView.setLayoutManager(mLayoutManager);
-        mRecyclerView.setHasFixedSize(true);
-        getDataMateri();
+        pd = new ProgressDialog(getContext());
+        pd.setMessage("Loading...");
+        pd.show();
+        GetService service = ApiClient.getRetrofitInstance().create(GetService.class);
+        Call<List<Materi>> call =service.getMateri();
+        call.enqueue(new Callback<List<Materi>>() {
+            @Override
+            public void onResponse(Call<List<Materi>> call, Response<List<Materi>> response) {
+                pd.dismiss();
+                generateDataList(response.body());
+            }
+
+            @Override
+            public void onFailure(Call<List<Materi>> call, Throwable t) {
+                pd.dismiss();
+                Toast.makeText(getContext(), "Gagal Memuat", Toast.LENGTH_SHORT).show();
+            }
+        });
         return view;
     }
-    void getDataMateri(){
-        Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl(BASE_URL)
-                .addConverterFactory(GsonConverterFactory.create())
-                .build();
-        GetService service = retrofit.create(GetService.class);
-        Call<Result> getMateri = service.getMateri();
-       getMateri.enqueue(new Callback<Result>() {
-           @Override
-           public void onResponse(Call<Result> call, Response<Result> response) {
-               MateriAdapter adapter = new MateriAdapter(getContext(),response.body().getResult());
-               adapter.notifyDataSetChanged();
-               mRecyclerView.setAdapter(adapter);
-           }
 
-           @Override
-           public void onFailure(Call<Result> call, Throwable t) {
-               t.printStackTrace();
-           }
-       });
+    private void generateDataList(List<Materi> materiList){
+        RecyclerView recyclerView = getView().findViewById(R.id.rv_materi);
+        LinearLayoutManager manager = new LinearLayoutManager(getContext());
+        recyclerView.setLayoutManager(manager);
+        recyclerView.setHasFixedSize(true);
+        RecyclerView.Adapter adapter = new MateriAdapter(getContext(),materiList);
+        recyclerView.setAdapter(adapter);
     }
 }

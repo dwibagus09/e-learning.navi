@@ -20,15 +20,15 @@ import java.util.List;
 
 public class MateriAdapter extends RecyclerView.Adapter<MateriAdapter.MateriViewHolder> {
     private Context context;
-    private ArrayList<Materi> dataList;
+    List<Materi> dataList;
 
-    public MateriAdapter(Context context,ArrayList<Materi> dataList){
+    public MateriAdapter(Context context,List<Materi> dataList){
         this.context = context;
         this.dataList = dataList;
     }
-    void setMateri(ArrayList<Materi> materis){
-        this.dataList = materis;
-    }
+//    void setMateri(ArrayList<Materi> materis){
+//        this.dataList = materis;
+//    }
     @NonNull
     @Override
     public MateriViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int viewType) {
@@ -39,11 +39,12 @@ public class MateriAdapter extends RecyclerView.Adapter<MateriAdapter.MateriView
 
     @Override
     public void onBindViewHolder(@NonNull MateriViewHolder holder, int position) {
-        holder.mTextIdMateri.setText("Id : "+ dataList.get(position).getId_kelas());
-        holder.mTextNamaMateri.setText("Nama Materi : "+dataList.get(position).getNama_materi());
-        holder.mTextFileMateri.setText("File Materi : "+dataList.get(position).getFile_materi());
-        holder.mTextIdMengajar.setText("Id Mengaajr : "+dataList.get(position).getId_mengajar());
-        holder.mTextIdKelas.setText("Id kelas : "+dataList.get(position).getId_kelas());
+        final Materi materi = dataList.get(position);
+        holder.mTextIdMateri.setText("Id : "+ materi.getId_kelas());
+        holder.mTextNamaMateri.setText("Nama Materi : "+materi.getNama_materi());
+        holder.mTextFileMateri.setText("File Materi : "+materi.getFile_materi());
+        holder.mTextIdMengajar.setText("Id Mengaajr : "+materi.getId_mengajar());
+        holder.mTextIdKelas.setText("Id kelas : "+materi.getId_kelas());
     }
 
     @Override
@@ -53,7 +54,7 @@ public class MateriAdapter extends RecyclerView.Adapter<MateriAdapter.MateriView
 
     public class MateriViewHolder extends RecyclerView.ViewHolder {
         TextView mTextIdMateri,mTextNamaMateri,mTextFileMateri,mTextIdMengajar,mTextIdKelas;
-        Button btnDownload;
+//        Button btnDownload;
         public MateriViewHolder(@NonNull View itemView) {
             super(itemView);
             mTextIdMateri = itemView.findViewById(R.id.id_materi);
@@ -61,7 +62,7 @@ public class MateriAdapter extends RecyclerView.Adapter<MateriAdapter.MateriView
             mTextFileMateri = itemView.findViewById(R.id.file_materi);
             mTextIdMengajar = itemView.findViewById(R.id.id_mengajar);
             mTextIdKelas = itemView.findViewById(R.id.id_kelas);
-            btnDownload = itemView.findViewById(R.id.btn_M);
+//            btnDownload = itemView.findViewById(R.id.btn_M);
         }
     }
 }
