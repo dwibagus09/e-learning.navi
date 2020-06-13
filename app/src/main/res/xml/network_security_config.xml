@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<network-security-config xmlns:android="http://schemas.android.com/apk/res/android">
-    <domain-config cleartextTrafficPermitted="true">
-        <domain includeSubdomains="true">http://192.168.43.60/E-learning/index.php/Page_guru/api</domain>
-    </domain-config>
-</network-security-config>
