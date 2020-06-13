@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">E-Learning</string>
+    <string name="category">Selamat Datang!</string>
+    <string name="nama_materi">Nama Materi</string>
+    <string name="file_materi">File Materi</string>
+    <string name="home">Selamat Datang</string>
+    <string name="email">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="create_account">\@CreateByNAVI</string>
+    <string name="materi">Silahkan Pilih Materi</string>
+    <string name="entered">Masukkan Username</string>
+    <string name="enter">Enter</string>
+    <string name="download">Download</string>
+    <string name="tugas">Silahkan Pilih Tugas</string>
+    <string name="pilih_materi">Pilih Materi</string>
+    <string name="pilih_tugas">Pilih Tugas</string>
+    <string name="username">Username</string>
+    <string name="akses">Akses</string>
+    <string name="logout">Logout</string>
+    <string name="selamat">Selamat Datang !</string>
+    <string name="pilih_ujian">Pilih Ujian</string>
+    <string name="gambar_poster">Gambar Tugas</string>
+    <string name="kd_tugas">Kode Tugas</string>
+    <string name="desc">Deskripsi</string>
+    <string name="start">Waktu Mulai</string>
+    <string name="end">Waktu Selesai</string>
+    <string name="upload">Upload</string>
+    <string name="nis">NIS</string>
+    <string name="nama_siswa">Nama Siswa</string>
+    <string name="select">Select File</string>
+    <string name="profile">Profil</string>
+</resources>
